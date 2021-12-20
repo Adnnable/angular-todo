@@ -1,0 +1,12 @@
+
+<div class="container">
+  <input type="text" placeholder="Enter some task..." #task class="inputBox">
+  <br>
+  <button (click)= "addTask(task.value)" class="addBtn">Add task</button>
+</div>
+
+  <ul *ngFor = "let item of taskList">
+  <li class="list">{{item.name}} <button (click)="removeTask(item.id)" class="removeBtn">remove</button></li>
+  </ul>
+
+<router-outlet></router-outlet>
